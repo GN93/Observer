@@ -20,7 +20,10 @@ public class GuessGame {
     public static GuessGame getInstance(){
 
         if(instance == null){
-            instance = new GuessGame();
+            synchronized (GuessGame.class){
+                if(instance == null)
+                    instance = new GuessGame();
+            }
         }
 
         return instance;
