@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class GuessGame {
 
-    public GuessGame() {
+    private GuessGame() {
     }
 
     private int score;
     private static GuessGame instance;
-    private Scanner sc = new Scanner(System.in);
-    private Random rn = new Random();
+    private Scanner sc;
+    private Random rn;
 
     public int getScore() {
         return score;
@@ -26,13 +26,17 @@ public class GuessGame {
         return instance;
     }
 
-    public void play(Scanner sc, Random rn){
-
+    public void play(){
+        int selectedNumber;
+        int randomNumber;
+        sc = new Scanner(System.in);
+        rn = new Random();
         for (int i = 0; i < 10; i++) {
-            int guess = sc.nextInt();
-            if(guess == rn.nextInt(9)){
+            selectedNumber = sc.nextInt();
+            randomNumber = rn.nextInt(9);
+            if(selectedNumber == randomNumber){
                 score++;
-                System.out.println("Brawo! Twoj wynik =" + score);
+                System.out.println("Brawo! Wybrałeś: " + selectedNumber + ", wylosowano: " + randomNumber + ". Wynik: " + score);
             }
         }
 
