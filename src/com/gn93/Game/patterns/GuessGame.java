@@ -1,15 +1,18 @@
 package com.gn93.Game.patterns;
 
+import java.io.Serializable;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessGame {
+public class GuessGame implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private GuessGame() {
     }
 
     private int score;
-    private static GuessGame instance;
+    private static GuessGame instance = new GuessGame();
     private Scanner sc;
     private Random rn;
 
@@ -18,14 +21,6 @@ public class GuessGame {
     }
 
     public static GuessGame getInstance(){
-
-        if(instance == null){
-            synchronized (GuessGame.class){
-                if(instance == null)
-                    instance = new GuessGame();
-            }
-        }
-
         return instance;
     }
 
@@ -43,6 +38,10 @@ public class GuessGame {
             }
         }
 
+    }
+
+    protected Object readResolve(){
+        return instance;
     }
 
 
