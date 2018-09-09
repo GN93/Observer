@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Start commit");
+        FlightLeg flightLeg = new FlightLeg.FlightLegBuilder("Las Vegas", "Los Angeles").price(50.0).build();
+        System.out.println(flightLeg);
+
     }
 }
