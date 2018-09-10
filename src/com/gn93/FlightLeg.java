@@ -57,6 +57,8 @@ public class FlightLeg {
         }
 
         FlightLeg build(){
+            if (this.price == 0)
+                throw new IllegalStateException ("Brak wymaganego pola - cena!");
 
             return new FlightLeg(this);
         }
