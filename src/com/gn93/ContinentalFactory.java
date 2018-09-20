@@ -10,11 +10,11 @@ public class ContinentalFactory implements Factory {
     public BMW buildBMW(BMWModel bmwModel) {
         switch (bmwModel){
             case E60:
-                return new BMW(steeringWheelPosition, "GREY", 250, BMWModel.E60);
+                return new BMW(steeringWheelPosition, "GREY", 250, 2015);
             case X5:
-                return new BMW(steeringWheelPosition, "PURPLE", 250, BMWModel.X5);
+                return new BMW(steeringWheelPosition, "PURPLE", 250, 2018);
             case X7:
-                return new BMW(steeringWheelPosition, "YELLOW", 250, BMWModel.X5);
+                return new BMW(steeringWheelPosition, "YELLOW", 250, 2017);
             default:
                 throw new UnsupportedOperationException("Błędny model!");
         }
@@ -24,11 +24,11 @@ public class ContinentalFactory implements Factory {
     public Ford buildFord(FordModel fordModel) {
         switch(fordModel){
             case CMAX:
-                return new Ford(steeringWheelPosition, "BLACK",190,FordModel.CMAX);
+                return new Ford(steeringWheelPosition, "BLACK",190,2006);
             case F150:
-                return new Ford(steeringWheelPosition, "RED",240,FordModel.F150);
+                return new Ford(steeringWheelPosition, "RED",240,2008);
             case Mustang:
-                return new Ford(steeringWheelPosition, "BLUE",280,FordModel.Mustang);
+                return new Ford(steeringWheelPosition, "BLUE",280,2010);
             default:
                 throw new UnsupportedOperationException("Błędny model!");
         }
