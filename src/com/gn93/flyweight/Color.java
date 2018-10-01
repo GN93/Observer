@@ -1,7 +1,9 @@
 package com.gn93.flyweight;
 
 public class Color {
-    int r, g, b;
+    private final int r;
+    private final int g;
+    private final int b;
 
     public Color(int r, int g, int b) {
         this.r = r;

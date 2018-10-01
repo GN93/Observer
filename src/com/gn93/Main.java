@@ -1,9 +1,18 @@
 package com.gn93;
 
+import com.gn93.flyweight.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Start commit");
+        ChessPiece blackPawn = new BlackPiece("Czarny Pionek",7, "a");
+        ChessPiece whitePawn = new WhitePiece("Biały Pionek",2,"a");
+        ChessPiece blackQueen = new BlackQueen("Czarna Królowa");
+        ChessPiece whiteQueen = new WhiteQueen("Biala Królowa");
+
+        System.out.println(blackPawn.getColor()==blackQueen.getColor());
+        System.out.println(whitePawn.getColor()==whiteQueen.getColor());
+
     }
 }
