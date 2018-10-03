@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public interface LibraryAPI {
 
-    boolean isAviable(String bookTitle);
+    boolean isAvailable(String bookTitle);
 
     LocalDate dueDate(String bookTitle, String pesel);
 

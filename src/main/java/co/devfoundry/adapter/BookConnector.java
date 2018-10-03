@@ -14,8 +14,8 @@ public class BookConnector {
         this.api = api;
     }
 
-    public boolean checkAviability(String title) {
-        return api.isAviable(title);
+    public boolean checkAvailability(String title) {
+        return api.isAvailable(title);
     }
 
     public boolean reserve(String title, User user) {

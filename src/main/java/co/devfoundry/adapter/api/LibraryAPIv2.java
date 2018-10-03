@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public interface LibraryAPIv2 {
 
-    int numberOfAviableCopies(String bookTitle);
+    int numberOfAvailableCopies(String bookTitle);
 
     LocalDate dueDate(String bookTitle, String firstName, String lastName, LocalDate dateOfBirth);
 

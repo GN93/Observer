@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class LibraryAPIImpl implements LibraryAPI {
 
 
-    public boolean isAviable(String bookTitle) {
+    public boolean isAvailable(String bookTitle) {
         System.out.println("Sprawdzam dostepnosc " + bookTitle);
         return true;
     }

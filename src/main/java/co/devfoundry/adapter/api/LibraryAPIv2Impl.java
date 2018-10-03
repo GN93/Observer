@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class LibraryAPIv2Impl implements LibraryAPIv2 {
 
-    public int numberOfAviableCopies(String bookTitle) {
+    public int numberOfAvailableCopies(String bookTitle) {
         System.out.println("Sprawdzam dostepnosc " + bookTitle);
         return 3;
 
