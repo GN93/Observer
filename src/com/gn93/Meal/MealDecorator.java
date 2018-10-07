@@ -1,9 +1,15 @@
 package Meal;
 
-public class MealDecorator extends Meal {
+public abstract class MealDecorator extends Meal {
+
+    public Meal meal;
+
+    public MealDecorator(Meal meal) {
+        this.meal = meal;
+    }
 
     @Override
     public void prepareMeal() {
-        super.prepareMeal();
+        this.meal.prepareMeal();
     }
 }
